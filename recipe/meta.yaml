@@ -1,24 +1,22 @@
-{% set name = "django-libsass" %}
 {% set version = "0.7" %}
-{% set sha256 = "49db3334b87e1f7955c4f9fb9945bc296f8bfd27a14d6d89706e4b0e5dc5de1c" %}
 
 package:
-  name: {{ name|lower }}
+  name: django-libsass
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/d/django-libsass/django-libsass-{{ version }}.tar.gz
+  sha256: 49db3334b87e1f7955c4f9fb9945bc296f8bfd27a14d6d89706e4b0e5dc5de1c
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
   skip: true  # [win and py27]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - django >=1.8
@@ -30,7 +28,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   # file not packaged; see https://github.com/torchbox/django-libsass/pull/28
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  license_file: LICENSE
   summary: 'A django-compressor filter to compile SASS files using libsass'
   description: |
     A django-compressor filter to compile Sass files using libsass.
