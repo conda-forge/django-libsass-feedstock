@@ -5,16 +5,16 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/django-libsass/django-libsass-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/d/django-libsass/django-libsass-{{ version }}.tar.gz
   sha256: 49db3334b87e1f7955c4f9fb9945bc296f8bfd27a14d6d89706e4b0e5dc5de1c
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and py27]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
