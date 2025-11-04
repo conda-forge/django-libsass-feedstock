@@ -24,6 +24,8 @@ requirements:
     - django >=4.2,<6.0.0
     - django-compressor >=1.3
     - libsass >=0.7.0,<1
+    - rcssmin ==1.1.2 # django-compressor 4.5.1 requires rcssmin, which is not installed.
+    - rjsmin ==1.1.2  # django-compressor 4.5.1 requires rjsmin, which is not installed.
 
 
 test:
