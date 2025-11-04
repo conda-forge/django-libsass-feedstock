@@ -37,10 +37,17 @@ test:
 
 about:
   home: https://github.com/torchbox/django-libsass
-  summary: A django-compressor filter to compile SASS files using libsass
   license: BSD-3-Clause
+  license_family: BSD
   license_file: LICENSE
+  summary: 'A django-compressor filter to compile SASS files using libsass'
+  description: |
+    A django-compressor filter to compile Sass files using libsass.
+  doc_url: https://github.com/torchbox/django-libsass
+  dev_url: https://github.com/torchbox/django-libsass
 
 extra:
   recipe-maintainers:
     - rxm7706
+    - cshaley
+    - sannykr
