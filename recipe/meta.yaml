@@ -2,10 +2,10 @@
 
 package:
   name: django-libsass
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
-  url: https://pypi.io/packages/source/d/django-libsass/django-libsass-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/d/django-libsass/django-libsass-{{ version }}.tar.gz
   sha256: bfbbb55a8950bb40fa04dd416605f92da34ad1f303b10a41abc3232386ec27b5
 
 build:
@@ -16,6 +16,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
     - django >=1.8
